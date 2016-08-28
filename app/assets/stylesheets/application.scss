@@ -13,9 +13,6 @@
  *= require_tree .
  *= require_self
  */
-@import "materialize/components/color";
-$primary-color: color("deep-orange", "darken-3") !default;
-@import 'materialize';
 @import 'animate.css/animate';
-@import 'materialize-jeff'
+
 

@@ -31,7 +31,6 @@ gem 'jbuilder', '~> 2.5'
 # gem 'capistrano-rails', group: :development
 
 gem 'rails_12factor', group: :production
-gem 'materialize-sass'
 gem "slim-rails"
 
 group :development, :test do
