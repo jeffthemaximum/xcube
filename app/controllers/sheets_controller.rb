@@ -1,9 +1,7 @@
 class SheetsController < ApplicationController
   def create
-    url = Rails.application.secrets.helloworld_xcube_url
-    puts url
     sheet_name = params["sheet"]["name"]
-    HTTParty.post url , body: { s: sheet_name }, timeout: 300
+    CallScraperWorker.perform_async(sheet_name)
   end
 
   def new
