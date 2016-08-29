@@ -1,9 +1,12 @@
 .bs-docs-header#content
     .container
-        h1 XCube
-        p 
-            | Powered by: 
-            = image_tag("https://d3t9s8cdqyboc5.cloudfront.net/assets/logos/experiment-white-2x-abb9ff5cec5b1f725481b1b3175e218ede52842c54a4e4ffd1215ced4448af85.png", :class => "experiment")
+        .row
+            .col-xs-6
+                h1 XCube
+            .col-xs-6
+                p 
+                    | Powered by: 
+                    = image_tag("https://d3t9s8cdqyboc5.cloudfront.net/assets/logos/experiment-white-2x-abb9ff5cec5b1f725481b1b3175e218ede52842c54a4e4ffd1215ced4448af85.png", :class => "experiment")
 
 = render partial: 'sheets/new_sheet_directions'
 = render partial: 'sheets/sheet_form', locals: { sheet: @sheet }

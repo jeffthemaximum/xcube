@@ -1,6 +1,32 @@
-= form_for sheet, :url => sheets_create_path(sheet) do |f|
-    .row
-        .input-field.col.s12
-            = f.text_field :name
-            = f.label :sheet_name
-            = f.submit 'Submit', class: 'deep-orange darken-3 waves-effect waves-light btn'
+.container
+    = form_for sheet, :url => sheets_create_path(sheet) do |f|
+        .form-group
+            .input-field
+                = f.label :sheet_name, class: "control-label"
+                = f.text_field :name, class: "form-control input-lg"
+        .form-group
+            .input-field
+                = f.submit 'Submit', class: "btn btn-primary btn-lg"
+
+
+/ <form>
+/   <div class="form-group">
+/     <label for="exampleInputEmail1">Email address</label>
+/     <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email">
+/   </div>
+/   <div class="form-group">
+/     <label for="exampleInputPassword1">Password</label>
+/     <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+/   </div>
+/   <div class="form-group">
+/     <label for="exampleInputFile">File input</label>
+/     <input type="file" id="exampleInputFile">
+/     <p class="help-block">Example block-level help text here.</p>
+/   </div>
+/   <div class="checkbox">
+/     <label>
+/       <input type="checkbox"> Check me out
+/     </label>
+/   </div>
+/   <button type="submit" class="btn btn-default">Submit</button>
+/ </form>
