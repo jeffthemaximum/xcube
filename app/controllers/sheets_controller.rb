@@ -1,7 +1,11 @@
 class SheetsController < ApplicationController
   def create
-    sheet_name = params["sheet"]["name"]
-    CallScraperWorker.perform_async(sheet_name)
+    binding.pry
+    if params["sheet"]["name"]
+      sheet_name = params["sheet"]["name"]
+      @sheet = Sheet.find_or_create_by(name: sheet_name)
+      @sheet.update(status: 'in progress')
+      CallScraperWorker.perform_async(@sheet)
   end
 
   def new
